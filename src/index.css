@@ -13,3 +13,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#root {
+  margin-left: 100px;
+}
+h2 {
+  margin: 35px 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  color: #010101;
+}
+.title {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.Stats {
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.Stats li {
+  margin-top: 5px;
+}
+p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+button {
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+button:active {
+  color: #ffffff;
+  background-color: #2023c4;
+  border-color: #2023c4;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.buttons {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  margin-left: 10px;
+}
