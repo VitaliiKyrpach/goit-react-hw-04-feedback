@@ -1,10 +1,13 @@
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  const [good, neutral, bad] = options;
+export const FeedbackOptions = ({ onLeaveFeedback }) => {
   const [setGood, setNeutral, setBad] = onLeaveFeedback;
   return (
     <ul className="buttons">
       <li>
-        <button type="button" name="good" onClick={() => setGood(good + 1)}>
+        <button
+          type="button"
+          name="good"
+          onClick={() => setGood(prev => prev + 1)}
+        >
           Good
         </button>
       </li>
@@ -12,13 +15,17 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         <button
           type="button"
           name="neutral"
-          onClick={() => setNeutral(neutral + 1)}
+          onClick={() => setNeutral(prev => prev + 1)}
         >
           Neutral
         </button>
       </li>
       <li>
-        <button type="button" name="bad" onClick={() => setBad(bad + 1)}>
+        <button
+          type="button"
+          name="bad"
+          onClick={() => setBad(prev => prev + 1)}
+        >
           Bad
         </button>
       </li>

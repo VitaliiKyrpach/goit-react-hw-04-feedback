@@ -15,10 +15,7 @@ export const App = () => {
   return (
     <div className="App">
       <Section title="Please leave feedback">
-        <FeedbackOptions
-          options={[good, neutral, bad]}
-          onLeaveFeedback={[setGood, setNeutral, setBad]}
-        />
+        <FeedbackOptions onLeaveFeedback={[setGood, setNeutral, setBad]} />
       </Section>
       <Section title="Statistics">
         {good || neutral || bad ? (
