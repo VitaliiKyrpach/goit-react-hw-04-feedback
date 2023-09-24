@@ -11,11 +11,18 @@ export const App = () => {
 
   const total = good + neutral + bad;
   const positive = Math.round((100 / total) * good);
-
+  const count = opt => {
+    if (opt === 'Good') setGood(prev => prev + 1);
+    if (opt === 'Neutral') setNeutral(prev => prev + 1);
+    if (opt === 'Bad') setBad(prev => prev + 1);
+  };
   return (
     <div className="App">
       <Section title="Please leave feedback">
-        <FeedbackOptions onLeaveFeedback={[setGood, setNeutral, setBad]} />
+        <FeedbackOptions
+          options={['Good', 'Neutral', 'Bad']}
+          onLeaveFeedback={count}
+        />
       </Section>
       <Section title="Statistics">
         {good || neutral || bad ? (
